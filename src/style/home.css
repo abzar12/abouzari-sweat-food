@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=My+Soul&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    left: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo span {
+    color: #9ACD32;
+    font-size: 2rem;
+}
+
+.navbar {
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+
+
+}
+
+.navbar ul li .Nav-item {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    color: #9ACD32;
+}
+
+.navbar ul li .Nav-item::after {
+    position: absolute;
+    content: "";
+    background-color: #b1c708;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: 0.4s ease;
+}
+
+.navbar ul li .Nav-item:hover::after {
+    width: 100%;
+}
+
+.ac-container {
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ac-container {
+    height: 500px;
+    width: 100%;
+    background-image: url("/public/rest-img/1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.ac-container .Dark {
+    background-color: rgb(0, 0, 0, 0.4);
+    height: 100%;
+}
+
+.ac-container .Dark h1 {
+    padding-top: 200px;
+    font-size: 3rem;
+    font-family: 'My Soul';
+    color: #9ACD32;
+}
+
+.ac-container .Dark p {
+    font-size: 1.3rem;
+    font-family: 'merriweather';
+    font-weight: 200;
+}
+
+.ac-container .Dark .ac-button .button1 {
+    margin-top: 50px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid #b1c708;
+    background-color: transparent;
+    color: white;
+    margin-left: 50px;
+    font-family: 'lora';
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.ac-container .Dark .ac-button .button2 {
+    margin-top: 50px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid #b1c708;
+    background-color: #b1c708;
+    margin-left: 50px;
+    font-family: 'lora';
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.ac-container .Dark .ac-button .button1:hover {
+    background-color: #b1c708;
+}
+
+.ac-container .Dark .ac-button .button2:hover {
+    background-color: transparent;
+}
+
+/* ---------------------------section menu---------------- */
+.our-menu {
+    background-color: rgba(29, 75, 0, 0.9);
+    color: white;
+    padding: 20px;
+}
+
+.our-menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'My Soul';
+    letter-spacing: 15px;
+}
+
+.our-menu .ac-menu {
+    margin-inline: auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.our-menu .ac-menu .ac-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 250px));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.ac-menu .ac-card-item:hover {
+    transform: scale(1.1);
+}
+
+.ac-menu .ac-card-item {
+    width: 190px;
+    border: 2px solid rgba(255, 255, 255, 0.796);
+    margin-inline: auto;
+    height: 220px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 0;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.ac-menu .ac-card-item img {
+    width: 100%;
+    height: 50%;
+    /* mix-blend-mode: multiply; */
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.ac-menu .ac-card-item .food-text {
+    padding-inline: 10px;
+    color: black;
+}
+
+.ac-card-item .food-text h3 {
+    font-size: 1.3rem;
+    font-family: 'Lora';
+}
+
+.ac-card-item .food-text .button {
+    position: absolute;
+    bottom: 10px;
+    margin-left: 25px;
+    text-align: center;
+
+}
+
+.ac-card-item .food-text button {
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #b1c708;
+    font-size: 1.1rem;
+    color: #b1c708;
+    transition: 0.4s ease-in;
+    font-family: 'Merriweather';
+}
+
+.ac-card-item .food-text button:hover {
+    color: white;
+    background-color: #b1c708;
+}
+
+/* ------------------------- section About Us--------------------- */
+
+.AboutUs {
+    background-color: white;
+
+    padding: 30px;
+}
+
+/* title */
+.AboutUs .ac-about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'My Soul';
+    letter-spacing: 15px;
+    color: #b1c708;
+}
+
+.AboutUs .ac-about .ac-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* about imaage */
+.ac-about .ac-content .imgBox {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.ac-content .imgBox .ac-img {
+    width: 100%;
+}
+
+.ac-content .imgBox img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.ac-content .imgBox .ac-img2 {
+    padding: 50px 100px 0px 0px;
+}
+
+.ac-content .imgBox .ac-img3 {
+    padding: 0px 0px 50px 100px;
+}
+
+.ac-content .imgBox .ac-img1 {
+    padding: 0px 0px 0px 50px;
+}
+
+.ac-content .imgBox .ac-img4 {
+    padding: 0px 50px 0px 0px;
+}
+
+/* about the text */
+
+.ac-about .ac-content .ac-text h3 {
+    text-align: center;
+
+    font-size: rem;
+    font-family: 'Lora';
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ac-about .ac-content .ac-text h3 span {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'My Soul';
+    color: #b1c708;
+}
+
+.ac-about .ac-content .ac-text .Utensils {
+    animation: bounce 0.6s ease infinite alternate;
+}
+
+.ac-about .ac-content .ac-text p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 25px;
+    padding-right: 15px;
+}
+
+.ac-about .ac-content .ac-text .button {
+    text-align: center;
+}
+
+.ac-about .ac-content .ac-text .button button {
+    padding: 5px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid #b1c708;
+    font-size: 1.7rem;
+    background-color: transparent;
+    color: #b1c708;
+    font-family: 'Lora';
+    font-weight: 200;
+    transition: all 0.5s ease-in;
+    position: relative;
+    cursor: pointer;
+}
+
+.ac-about .ac-content .ac-text .button button::after {
+    content: "";
+    background-color: #b1c708;
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    transition: all 0.6s ease-in;
+    z-index: -1;
+    opacity: 0;
+
+}
+
+.ac-about .ac-content .ac-text .button button:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.ac-about .ac-content .ac-text .button button:hover {
+    transform: rotate(-5deg);
+    z-index: 10;
+    color: white;
+}
+
+/* --------------------------------section Card-------------------------------------- */
+.cards {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.cards .ac-cards .cards {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards .ac-cards .cards .card {
+    width: 230px;
+    height: auto;
+    box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.205);
+    border-radius: 10px;
+    padding: 10px 10px 30px 10px;
+    transition: 0.4s ease-in-out;
+}
+
+.cards .ac-cards .cards .card:hover {
+    transform: perspective(500px) rotateX(30deg);
+
+}
+
+.cards .ac-cards .cards .card .cardIcon {
+    font-size: 4rem;
+    color: #758904;
+}
+
+.cards .ac-cards .cards .card h1 {
+    font-family: 'Lora';
+    margin-bottom: 5px;
+}
+
+.cards .ac-cards .cards .card p {
+    line-height: 25px;
+}
+
+/* --------------------------------section Teams-------------------------------------- */
+.teams {
+    background-color: rgb(6, 18, 0);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.teams .ac-teams {
+    position: relative;
+    padding: 30px;
+}
+
+.teams .ac-teams h1 {
+    position: absolute;
+    text-align: center;
+    font-size: 5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.2;
+    font-weight: bold;
+    color: rgb(103, 103, 103);
+}
+
+.teams .ac-teams h2 {
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    top: -15px;
+    z-index: 0;
+    color: white;
+}
+
+.teams .ac-teams .teams {
+    width: 100%;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.ac-teams .teams .team {
+    border: 1px solid white;
+    background-color: white;
+    min-width: 200px;
+    padding-inline: auto;
+    min-height: 250px;
+    padding: 20px;
+}
+
+.ac-teams .teams .team .img {
+    height: 100px;
+    width: 100px;
+    margin-inline: auto;
+}
+
+.ac-teams .teams .team img {
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------ animation----------------- */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-30px);
+    }
+}

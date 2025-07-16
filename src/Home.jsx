@@ -69,10 +69,10 @@ function Home() {
                         <h2>About <span>Us</span></h2>
                         <div className="ac-content">
                             <div className="imgBox">
-                                <div className="ac-img"><img className="ac-img1" src="/rest-img/2.jpg" alt="ours Restaurant" /></div>
-                                <div className="ac-img"><img className="ac-img2" src="/rest-img/3.jpg" alt="ours Restaurant" /></div>
-                                <div className="ac-img"><img className="ac-img3" src="/rest-img/4.jpg" alt="ours Restaurant" /></div>
-                                <div className="ac-img"><img className="ac-img4" src="/rest-img/6.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img1" src="./rest-img/2.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img2" src="./rest-img/3.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img3" src="./rest-img/4.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img4" src="./rest-img/6.jpg" alt="ours Restaurant" /></div>
                             </div>
                             <div className="ac-text">
                                 <h3>Whelcome to <span>Sweat <FaUtensils className="Utensils" /> Meal </span>  Restaurant</h3>

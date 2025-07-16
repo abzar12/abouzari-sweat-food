@@ -5,14 +5,14 @@ import { FaCartShopping } from "react-icons/fa6";
 import { MdRoomService } from "react-icons/md";
 import { GiMeal } from "react-icons/gi";
 import './style/home.css'
-function Home(props) {
+function Home() {
     const card = [
-        { id: 1, name: "Burger", url: "/rest-img/burger.jpg", price: "200 $" },
-        { id: 2, name: "Pizza", url: "/rest-img/pizza.jpg", price: "100 $" },
-        { id: 3, name: "Salad", url: "/rest-img/salad.jpg", price: "150 $" },
-        { id: 4, name: "Sandwitch", url: "/rest-img/sandwitch.jpg", price: "90 $" },
-        { id: 5, name: "Meat", url: "/rest-img/meat.jpg", price: "300 $" },
-        { id: 6, name: "Beef Burgers", url: "/rest-img/burge2.jpg", price: "200 $" },
+        { id: 1, name: "Burger", url: "./rest-img/burger.jpg", price: "200 $" },
+        { id: 2, name: "Pizza", url: "./rest-img/pizza.jpg", price: "100 $" },
+        { id: 3, name: "Salad", url: "./rest-img/salad.jpg", price: "150 $" },
+        { id: 4, name: "Sandwitch", url: "./rest-img/sandwitch.jpg", price: "90 $" },
+        { id: 5, name: "Meat", url: "./rest-img/meat.jpg", price: "300 $" },
+        { id: 6, name: "Beef Burgers", url: "./rest-img/burge2.jpg", price: "200 $" }
     ]
     const Chefs = [
     {id: 1, img:"./rest-img/Chef1.jpg",  alt:"chef1",  name:"Mohamed", experience: "20ans"},

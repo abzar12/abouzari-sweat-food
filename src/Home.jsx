@@ -1,3 +1,8 @@
+import React, {useEffect, useState} from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// end of slide import
 import Navbar from "./component/navbar";
 import { FaUtensils } from "react-icons/fa";
 import { FaUserTie } from "react-icons/fa";
@@ -5,7 +10,39 @@ import { FaCartShopping } from "react-icons/fa6";
 import { MdRoomService } from "react-icons/md";
 import { GiMeal } from "react-icons/gi";
 import './style/home.css'
+
 function Home() {
+     const [settings, setSettings] = useState({
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
+  });
+  useEffect(()=>{
+    setInterval(() => {
+        let Width = window.innerWidth;
+         if(Width >= "860"){
+        setSettings((prev) => {
+            return {...prev, slidesToShow: 3}
+        }) }
+        if(Width <= "860"){
+        setSettings((prev) => {
+            return {...prev, slidesToShow: 2}
+        })
+    }
+     if(Width <= "620"){
+        setSettings((prev) =>{
+            return {...prev, slidesToShow: 1}
+        })
+    }
+    }, 1000);
+  },[])
+  
+
     const card = [
         { id: 1, name: "Burger", url: "./rest-img/burger.jpg", price: "200 $" },
         { id: 2, name: "Pizza", url: "./rest-img/pizza.jpg", price: "100 $" },
@@ -15,15 +52,22 @@ function Home() {
         { id: 6, name: "Beef Burgers", url: "./rest-img/burge2.jpg", price: "200 $" }
     ]
     const Chefs = [
-    {id: 1, img:"./rest-img/Chef1.jpg",  alt:"chef1",  name:"Mohamed", experience: "20ans"},
-     {id: 2, img:"./rest-img/Chef2.jpg", alt:"chef2",  name:"Mohamed", experience: "20ans"},
-     {id: 3, img:"./rest-img/Chef3.jpg", alt:"chef3",  name:"Mohamed", experience: "20ans"},
-     {id: 4, img:"./rest-img/Chef4.jpg", alt:"chef4",  name:"Mohamed", experience: "20ans"},
-     {id: 5, img:"./rest-img/Chef5.jpg", alt:"chef5",  name:"Mohamed", experience: "20ans"},
-     {id: 6, img:"./rest-img/Chef6.jpg", alt:"chef6",  name:"Mohamed", experience: "20ans"},
-     {id: 7, img:"./rest-img/Chef7.jpg", alt:"chef7",  name:"Mohamed", experience: "20ans"},
-     {id: 8, img:"./rest-img/Chef8.jpg", alt:"chef7",  name:"Mohamed", experience: "20ans"}
+    {id: 1, img:"./rest-img/Chef1.jpg",  alt:"chef1",  name:"Mohamed", experience: "20 ans"},
+     {id: 2, img:"./rest-img/Chef2.jpg", alt:"chef2",  name:"Alassane", experience: "01 ans"},
+     {id: 3, img:"./rest-img/Chef3.jpg", alt:"chef3",  name:"Fanta", experience: "10 ans"},
+     {id: 4, img:"./rest-img/Chef4.jpg", alt:"chef4",  name:"Oumar", experience: "05 ans"},
+     {id: 5, img:"./rest-img/Chef5.jpg", alt:"chef5",  name:"Hamath", experience: "02 ans"},
+     {id: 6, img:"./rest-img/Chef6.jpg", alt:"chef6",  name:"Joe", experience: "15 ans"},
+     {id: 7, img:"./rest-img/Chef7.jpg", alt:"chef7",  name:"Kalidy", experience: "07 ans"},
+     {id: 8, img:"./rest-img/Chef8.jpg", alt:"chef7",  name:"Moussa", experience: "20 ans"}
   ]
+  const testimonial =[
+    {id: 1, message:"je suis née en mille neuf cent quatre ving je suis gentille and j'aime travailler", url:"./rest-img/Chef1.jpg", name: "Nama"},
+    {id: 2, message:"je suis née en mille neuf cent quatre ving je suis gentille and j'aime travailler", url:"./rest-img/Chef1.jpg", name: "Nama"},
+    {id: 3, message:"je suis née en mille neuf cent quatre ving je suis gentille and j'aime travailler", url:"./rest-img/Chef1.jpg", name: "Nama"},
+    {id: 4, message:"je suis née en mille neuf cent quatre ving je suis gentille and j'aime travailler", url:"./rest-img/Chef1.jpg", name: "Nama"},
+  ]
+  
     return (
         <>
             <header>
@@ -64,28 +108,6 @@ function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="AboutUs">
-                    <div className="ac-about">
-                        <h2>About <span>Us</span></h2>
-                        <div className="ac-content">
-                            <div className="imgBox">
-                                <div className="ac-img"><img className="ac-img1" src="./rest-img/2.jpg" alt="ours Restaurant" /></div>
-                                <div className="ac-img"><img className="ac-img2" src="./rest-img/3.jpg" alt="ours Restaurant" /></div>
-                                <div className="ac-img"><img className="ac-img3" src="./rest-img/4.jpg" alt="ours Restaurant" /></div>
-                                <div className="ac-img"><img className="ac-img4" src="./rest-img/6.jpg" alt="ours Restaurant" /></div>
-                            </div>
-                            <div className="ac-text">
-                                <h3>Whelcome to <span>Sweat <FaUtensils className="Utensils" /> Meal </span>  Restaurant</h3>
-                                <p>At our restaurant, we serve more than just food — we create memorable dining experiences. With fresh ingredients, creative dishes, and welcoming service, every visit is a chance to enjoy great flavors and warm hospitality. Whether it’s a casual meal or a special occasion, we’re here to make it feel special.</p>
-                                <p>Whether you're stopping by for a quick bite or celebrating something special, we aim to make every visit feel welcoming and memorable. Our menu blends fresh, local ingredients with creative flavors to offer something for everyone.</p>
-                                <div className="button">
-                                    <a href="#"><button type="button">Read More</button></a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section className="cards">
                     <div className="ac-cards">
                         <div className="cards">
@@ -113,21 +135,66 @@ function Home() {
                         </div>
                     </div>
                 </section>
+                <section className="AboutUs">
+                    <div className="ac-about">
+                        <h2>About <span>Us</span></h2>
+                        <div className="ac-content">
+                            <div className="imgBox">
+                                <div className="ac-img"><img className="ac-img1" src="./rest-img/2.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img2" src="./rest-img/3.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img3" src="./rest-img/4.jpg" alt="ours Restaurant" /></div>
+                                <div className="ac-img"><img className="ac-img4" src="./rest-img/6.jpg" alt="ours Restaurant" /></div>
+                            </div>
+                            <div className="ac-text">
+                                <h3>Welcome to <span>Sweat <FaUtensils className="Utensils" /> Meal </span>  Restaurant</h3>
+                                <p>At our restaurant, we serve more than just food — we create memorable dining experiences. With fresh ingredients, creative dishes, and welcoming service, every visit is a chance to enjoy great flavors and warm hospitality. Whether it’s a casual meal or a special occasion, we’re here to make it feel special.</p>
+                                <p>Whether you're stopping by for a quick bite or celebrating something special, we aim to make every visit feel welcoming and memorable. Our menu blends fresh, local ingredients with creative flavors to offer something for everyone.</p>
+                                <div className="button">
+                                    <a href="#"><button type="button">Read More</button></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
                 <section className="teams">
                     <div className="ac-teams">
                         <h1>Our Teams</h1>
                         <h2>Our Teams</h2>
-                        <div className="teams">
+                        <div className="teams slider-container">
+                            <Slider {...settings}>
                             {
                                 Chefs.map((chef, index) => (
                                     <div className="team" key={index}>
-                                        <div className="img"> <img src={chef.img} alt={chef.alt} /></div>
+                                        <div className="img"> <img src={chef.img} alt={chef.alt} width={5}/>
                                         <h3>{chef.name}</h3>
-                                        <p>{chef.experience}</p>
+                                        </div>
+                                        
+                                        <p>{chef.experience} Experiences</p>
                                     </div>
                                 ))
                             }
-
+                            </Slider>
+                        </div>
+                    </div>
+                </section>
+                <section className="testimonial">
+                    <div className="ac-testimonial">
+                        <h1>Testimonial</h1>
+                        <h2>Ours Clients Said</h2>
+                        <div className="ac-messages">
+                            {
+                                testimonial.map((testi) =>(
+                                    <div className="contente" key={testi.key}>
+                                        <div className="">
+                                            <img src={testi.url} alt="" />
+                                            <h3> {testi.name} </h3>
+                                        </div>
+                                        <p>{testi.message} </p>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
                 </section>

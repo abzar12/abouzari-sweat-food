@@ -215,6 +215,47 @@ header {
     color: white;
     background-color: #b1c708;
 }
+/* --------------------------------section Card-------------------------------------- */
+.cards {
+    background-color: white;
+    padding: 20px;
+}
+
+.cards .ac-cards .cards {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards .ac-cards .cards .card {
+    width: 230px;
+    height: auto;
+    box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.205);
+    border-radius: 10px;
+    padding: 10px 10px 30px 10px;
+    transition: 0.4s ease-in-out;
+}
+
+.cards .ac-cards .cards .card:hover {
+    transform: perspective(500px) rotateX(30deg);
+
+}
+
+.cards .ac-cards .cards .card .cardIcon {
+    font-size: 4rem;
+    color: #758904;
+}
+
+.cards .ac-cards .cards .card h1 {
+    font-family: 'Lora';
+    margin-bottom: 5px;
+}
+
+.cards .ac-cards .cards .card p {
+    line-height: 25px;
+}
 
 /* ------------------------- section About Us--------------------- */
 
@@ -350,53 +391,10 @@ header {
     color: white;
 }
 
-/* --------------------------------section Card-------------------------------------- */
-.cards {
-    background-color: white;
-    margin-bottom: 30px;
-    padding: 20px;
-}
-
-.cards .ac-cards .cards {
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.cards .ac-cards .cards .card {
-    width: 230px;
-    height: auto;
-    box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.205);
-    border-radius: 10px;
-    padding: 10px 10px 30px 10px;
-    transition: 0.4s ease-in-out;
-}
-
-.cards .ac-cards .cards .card:hover {
-    transform: perspective(500px) rotateX(30deg);
-
-}
-
-.cards .ac-cards .cards .card .cardIcon {
-    font-size: 4rem;
-    color: #758904;
-}
-
-.cards .ac-cards .cards .card h1 {
-    font-family: 'Lora';
-    margin-bottom: 5px;
-}
-
-.cards .ac-cards .cards .card p {
-    line-height: 25px;
-}
 
 /* --------------------------------section Teams-------------------------------------- */
 .teams {
-    background-color: rgb(6, 18, 0);
-    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
 }
 
@@ -414,7 +412,7 @@ header {
     z-index: 0;
     opacity: 0.2;
     font-weight: bold;
-    color: rgb(103, 103, 103);
+    color: rgb(29, 29, 29);
 }
 
 .teams .ac-teams h2 {
@@ -423,38 +421,112 @@ header {
     font-size: 2rem;
     top: -15px;
     z-index: 0;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .teams .ac-teams .teams {
-    width: 100%;
-    padding-inline: 30px;
-    display: flex;
-    justify-content: center;
+    max-width: 900px;
+    padding: 15px 30px;
     gap: 20px;
-    overflow: hidden;
+    margin-inline: auto;
+    text-align: center;
+    z-index: 0;
+    
 }
 
 .ac-teams .teams .team {
-    border: 1px solid white;
+    box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.205);
     background-color: white;
     min-width: 200px;
-    padding-inline: auto;
-    min-height: 250px;
-    padding: 20px;
+    max-width: 220px;
+    height: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 5px;
+    z-index: 10;
+    padding: 10px;
 }
 
 .ac-teams .teams .team .img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin-inline: auto;
 }
 
 .ac-teams .teams .team img {
-    border-radius: 50px;
+    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.ac-teams .teams .team h3{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.ac-teams .teams .team h3{
+    margin: 10px 0;
+}
+/* ----------------------------this is testimonial----------------------- */
+.testimonial{
+    background-color: rgba(29, 75, 0, 0.9);
+    padding: 20px;
+}
+.testimonial .ac-testimonial{
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    
+}
+/* for first header */
+.testimonial .ac-testimonial h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    width: 160px;
+    margin-inline: auto;
+}
+.testimonial .ac-testimonial h1::before{
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    position: absolute;
+    left: -50px;
+}
+.testimonial .ac-testimonial h1::after{
+    content: "";
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+}
+/* second header */
+.testimonial .ac-testimonial h2{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    width: 250px;
+    margin-inline: auto;
+}
+.testimonial .ac-testimonial h2::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0%;
+    position: absolute;
+}
+.testimonial .ac-testimonial h2::after{
+    content: "";
+   width: 50px;
+    height: 10px;
+    background-color: white;
+    left: 100px;
+    bottom: -4px;
+    position: absolute;
 }
 
 /* ------------------------------ animation----------------- */

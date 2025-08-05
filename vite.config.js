@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/End-of-day-Challenges/',
+  base: '/abouzari-sweat-food/',
 })

@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://abzar12.github.io/End-of-day-Challenges",
+  "homepage": "https://abzar12.github.io/abouzari-sweat-food/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d disk"
   },
   "dependencies": {
     "react": "^19.1.0",

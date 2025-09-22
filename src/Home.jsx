@@ -110,7 +110,7 @@ function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="cards">
+                <section className="cards" id="gallery">
                     <div className="ac-cards">
                         <div className="cards">
                             <div className="card">
@@ -203,7 +203,7 @@ function Home() {
                     </div>
                 </section>
             </main>
-            <footer>
+            <footer id="contact">
                 <Footer />
             </footer>
         </>

@@ -32,7 +32,7 @@ function Navbar() {
                         <ul className="Menu-Items">
                             {
                                 navItem.map(item => (
-                                    <li key={item.id}> <Link to={item.url} className="Nav-item" >{item.name}</Link> </li>
+                                    <li key={item.id}> <Link smooth={true} duration={500} to={item.url} className="Nav-item" >{item.name}</Link> </li>
                                 ))
                             }
                         </ul>

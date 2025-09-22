@@ -23,24 +23,50 @@ header {
 .navbar {
     margin-right: 20px;
 }
-
-.navbar ul li {
+.navbar .Items{
+    display: block;
+}
+.NavIcon{
+    display: none;
+}
+.NavIcon .MenuIcon{
+    width: 100%;
+    height: 100%; 
+    color: #9ACD32;
+    margin-top: 9px;
+}
+.Menu-Items{
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 25px;
+    border-top: 1px gray solid;
+}
+.Menu-Items li{ 
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: White;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+/* first Navbar display */
+.navbar .Items li {
     list-style: none;
     display: inline-block;
     margin-left: 30px;
     position: relative;
-
-
 }
 
-.navbar ul li .Nav-item {
+.navbar li .Nav-item {
     font-size: 1.3rem;
     text-decoration: none;
-    color: black;
     color: #9ACD32;
 }
 
-.navbar ul li .Nav-item::after {
+.navbar .Items li .Nav-item::after {
     position: absolute;
     content: "";
     background-color: #b1c708;
@@ -51,12 +77,11 @@ header {
     transition: 0.4s ease;
 }
 
-.navbar ul li .Nav-item:hover::after {
+.navbar .Items li .Nav-item:hover::after {
     width: 100%;
 }
 
 .ac-container {
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -646,5 +671,15 @@ header {
 
     to {
         transform: translateY(-30px);
+    }
+}
+/* responsibility */
+@media(max-width: 900px){
+    .navbar .Items{
+        display: none;
+    }
+    .NavIcon{
+        display: block;
+        font-size: xx-large;
     }
 }

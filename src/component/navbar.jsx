@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
 function Navbar() {
@@ -8,11 +8,11 @@ function Navbar() {
         setIsValid(!isvalid)
     }
     const navItem = [
-        { id: 1, name: "Home", url: "/As-code/home" },
-        { id: 2, name: "Menu", url: "/As-code/menu" },
-        { id: 3, name: "Gallery", url: "/As-code/gallery" },
-        { id: 4, name: "About", url: "/As-code/about" },
-        { id: 5, name: "Contact", url: "/As-code/contact" }
+        { id: 1, name: "Home", url: "home" },
+        { id: 2, name: "Menu", url: "menu" },
+        { id: 3, name: "Gallery", url: "gallery" },
+        { id: 4, name: "About", url: "about" },
+        { id: 5, name: "Contact", url: "contact" }
     ]
     return (
         <>
@@ -20,7 +20,7 @@ function Navbar() {
                 <ul className="Items">
                     {
                         navItem.map(item => (
-                            <li key={item.id}> <Link to={item.url} className="Nav-item" >{item.name}</Link> </li>
+                            <li key={item.id}> <Link smooth={true} duration={500} to={item.url} className="Nav-item" >{item.name}</Link> </li>
                         ))
                     }
                 </ul>

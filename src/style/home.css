@@ -176,9 +176,9 @@ header {
 }
 
 .our-menu .ac-menu .ac-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 250px));
-    gap: 30px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 50px;
 }
 
@@ -430,6 +430,7 @@ header {
 }
 
 .teams .ac-teams h1 {
+    width: 100%;
     position: absolute;
     text-align: center;
     font-size: 5rem;
@@ -576,7 +577,6 @@ header {
 .ac-testimonial .ac-messages .contente {
     display: flex;
     max-width: 100%;
-    height: 100px;
     color: black;
     border-radius: 10px;
     background-color: white;
@@ -682,4 +682,31 @@ header {
         display: block;
         font-size: xx-large;
     }
+    .AboutUs .ac-about .ac-content {
+         grid-template-columns: 1fr ;
+         row-gap: 50px;
+    }
+}
+@media(max-width:700px){
+    .our-menu .ac-menu .ac-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonial .ac-testimonial .ac-messages {
+         grid-template-columns: 1fr;
+    }
+}
+@media(max-width:500px){
+    .our-menu .ac-menu .ac-card {
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:300px){
+    .ac-container .Dark .ac-button .button1 {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .ac-container .Dark .ac-button .button2 {
+        margin-left: 0;
+    }
+
 }
